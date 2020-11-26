@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<math.h>
+
+int
+main ()
+{
+
+  int num, swappedNum, lastdigit, firstdigit, digit;
+  printf ("Pls Enter Some values to swape :\n");
+  scanf ("%d", &num);
+  lastdigit = num % 10;
+  digit = (int) log10 (num);
+  firstdigit = (int) num / pow (10, digit);
+  swappedNum = lastdigit;
+  swappedNum *= (int) pow (10, digit);
+  swappedNum += num % ((int) pow (10, digit));
+  swappedNum -= lastdigit;
+  swappedNum += firstdigit;
+
+printf("%d",swappedNum);
+  return 0;
+}
